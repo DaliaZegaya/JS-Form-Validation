@@ -8,35 +8,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
+    <form action="" onsubmit="return mainFunc ()">
         <h1>NEW USER</h1>
 
         <label for="Fname">First Name:</label>
         <input type="text" name="Fname" id="first_name" maxlength="10" required>
+        <span id="first_name_span"></span>
+
         <br>
 
         <label for="Lname">Last Name:</label>
         <input type="text" name="Lname" id="last_name">
+        <span id="last_name_span"></span>
+
         <br>
 
         <label for="Date">Date Of Birth:</label>
         <input type="text" name="date" id="user_date">
+        <span id="date_span"></span>
+
         <br>
 
         <label for="email">Email:</label>
         <input type="email" name="email" id="email">
+        <span id="email_span"></span>
+
         <br>
 
         <label for="phone">Phone Number:</label>
         <input type="text" name="phone" id="phone">
+        <span id="phone_span"></span>
+
         <br>
 
         <label for="password">Password:</label>
         <input type="password" name="password" id="password1">
+        <span id="password1_span"></span>
+
         <br>
 
         <label for="password2">Password2:</label>
         <input type="password" name="password2" id="password2">
+        <span id="password2_span"></span>
+
         <br>
 
         <button>SEND</button>

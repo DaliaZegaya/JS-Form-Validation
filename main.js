@@ -1,8 +1,20 @@
+function mainFunc () {
+    if (checkFirstName() && checkLastName() 
+    && checkDate() && checkEmail() && 
+    checkPhone && checkPasswords ) {
+        return true
+    }
+    return false
+}
+
+
 function checkFirstName () {
     var FnameRegex= /^(?=.*[a-z])(?=.*[A-Z])(?=.{,10})/
     if (FnameRegex.test(first_name.value)) {
         return true
     }
+    first_name_span.innerText= "*Invalid first name";
+    first_name_span.style.color= "red"
     return false
 }
 function checkLastName () {
@@ -33,4 +45,15 @@ function checkPhone () {
         return true
     }
     return false
+}
+function checkPasswords () {
+    var passwordsRegex=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,12})/
+    if (password1.value == password2. value) {
+        if (passwordsRegex.test (password1.value)) {
+            return true
+        }
+        password1_span.innerText= "Password is not strong"
+        return false
+    }
+    password1_span.innerText= "Passwords are not match"
 }
